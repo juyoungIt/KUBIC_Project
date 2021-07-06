@@ -1,0 +1,12 @@
+<!doctype html>
+<head>
+    <title>KUGLE: '{% if request.args.get('q') %}{{ request.args.get('q') }}{% endif %}' results2</title>
+</head>
+<body>
+    <h1>KUGLE: '{% if request.args.get('q') %}{{ request.args.get('q') }}{% endif %}' results2</h1>
+    <ul>
+        {% for item in arr %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>'{{ data[0] }}' 정보 : kugle 2.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <script type= "text/javascript" src="{{ url_for('static', filename='js/main.js') }}" ></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/resultdetail.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/detail.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+<div class="container bootstrap snippets bootdey">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="s006" style="background:none;min-height: 1vh;padding:5px;">
+                        <span onClick="location.href='/'" style="font-size:36px; padding-right: 20px;cursor: pointer;">
+                            kugle 2.0
+                        </span>
+                        <div class="search-form">
+                            <form role="form" method='GET' action='/results' style="">
+                                <fieldset>
+                                <div class="inner-form" style="">
+                                    <div class="input-field">
+                                    <button class="btn-search" type="submit" onClick="return checkInput()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                                        </svg>
+                                    </button>
+                                  <input id="search" type="text" placeholder="학술자료를 검색하세요" value="" name="q"/>
+                                </div>
+                                <div class="container" style="margin-top: 10px;">
+                                      <span class="form-check" style="margin-right: 5px;">
+                                        <input class="form-check-input" type="radio" name="c" id="category1" value='default' checked>
+                                        <label class="form-check-label" for="category1">
+                                          통합검색
+                                        </label>
+                                      </span>
+                                      <span class="form-check" style="margin-right: 5px;">
+                                        <input class="form-check-input" type="radio" name="c" id="category2" value='author'>
+                                        <label class="form-check-label" for="category2">
+                                          저자
+                                        </label>
+                                      </span>
+                                      <span class="form-check" style="margin-right: 5px;">
+                                        <input class="form-check-input" type="radio" name="c" id="category3" value='inst'>
+                                        <label class="form-check-label" for="category3">
+                                          기관
+                                        </label>
+                                      </span>
+                                    </div>
+                              </div>
+                            </fieldset>
+                          </form>
+                      </div>
+                    </div>
+                    <hr />
+                    
+                    <h2>
+                        <div id="title">
+                            <span class="text-navy">{{ data[1] }}</span>
+                        </div>
+                        <div id="author">
+                            {{ data[4] }}
+                        </div>
+                        <div id="institution">
+                            <a href="{{ data[7] }}" target=_blank>{{ data[6] }} <i class="fas fa-external-link-alt"></i></a>, {{ data[2] }}
+                        </div>
+                    </h2>
+                    <div id="information">
+                        <div class="alert alert-info" id="file-section">
+                            파일: <a href="{{ data[5] }}" target=_blank>{{ data[5] }}</a>
+                        </div>
+                        <div id="info-section">
+                            <h4>정보</h4>
+                            <hr />
+                            {{ data[8] }}
+                        </div>
+                    </div>
+        
+                    <div class="hr-line-dashed"></div>
+                    <div class="text-center">
+                        <small>kugle 2.0</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    
+
+<style type="text/css">
+
+
+                    
+</style>
+
+<script type="text/javascript">
+    
+</script>
+</body>
+</html>

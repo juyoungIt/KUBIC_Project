@@ -1,0 +1,28 @@
+#title {
+	font-weight: bold;
+	padding: 10px 0px;
+}
+
+#author, #institution{
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+
+#information {
+	padding: 10px 0px;
+}
+
+#file-section {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#info-section h4{
+	padding-top: 10px;
+	font-weight: bold;
+}
+
+#info-section hr {
+	margin-top: 10px;
+}
